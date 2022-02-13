@@ -29,7 +29,7 @@ jobs:
     steps:
       - checkout:
           path: ~/rails-docker-junjun
-      - ruby/install_deps
+      - ruby/install-deps
       - run:
           name: Database setup
           command: bundle exec rails db:migrate
@@ -39,7 +39,7 @@ jobs:
 
 workflows:
   version: 2
-  build_and_test:
+  build_test_and_deploy:
     jobs:
       - build
       - test:
