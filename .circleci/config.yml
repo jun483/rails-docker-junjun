@@ -31,8 +31,6 @@ jobs:
           path: ~/rails-docker-junjun
       - ruby/install-deps
       - run:
-          name: Database setup
-      - run:
           name: test
           command: bundle exec rake test
 
